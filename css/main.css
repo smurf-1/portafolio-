@@ -8,7 +8,6 @@ body{
 /* Aqui empieza los estilos de la barra de navegacion*/
 .navegacion{
     height: 70px;
-    margin: 10px;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 0 25px;
@@ -72,69 +71,33 @@ body{
     height: 600px;
 
 }
-.who-i-am {
-    height: 100%;
-    padding: 50px 20px;
-    margin-top: -80px;
-    background: var(--background);
-    background: url("/img/fondo.png") ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-    position: relative;
-    width: auto;
+.hero-body {
+    flex-grow: 1;
+    flex-shrink: 0
+}
+.columns.is-centered {
+    justify-content: center;
+}
+.quiensoy .avatar {
+    width: 100%;  /* Ajusta el tamaño */
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;  /* Centrar en la sección */
+    margin-top: 100px;
 }
 
-.who-i-am__content {
-    width: 80%;
+.is-primary {
+    background-color: #4788C0; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 50px 20px; /* Espaciado dentro de la sección */
 }
-
-.who-i-am__title {
-    font-size: 48px;
-    font-weight: normal;
-    margin-bottom: 16px;
-}
-
-.who-i-am__description {
-    font-size: 24px;
-}
-
-/* Aqui empiezan los estilos seccion de biografia*/
-
-.valores{
-    background-color: grey;
-    border: 10px solid;
-    border-color: black;
-    height: 400px;
-
-}
-.referencia{
-    background-color: grey;
-    border: 10px solid;
-    border-color: black;
-    height: 100px;
-
-}
-.quehago{
-    background-color: grey;
-    border: 10px solid;
-    border-color: black;
-    height: 700px;
-
-}
-.ultimoblog{
-    background-color: grey;
-    border: 10px solid;
-    border-color: black;
-    height: 700px;
-
-}
-.hobbie{
-    background-color: grey;
-    border: 10px solid;
-    border-color: black;
-    height: 700px;
-
+.habilidad{
+    margin-bottom: 20px; /* Espacio entre cajas */
+    padding: 20px; /* Espacio interno */
+    background-color: #f8f9fa; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 /*estilos de la pagina blog*/
@@ -151,4 +114,38 @@ body{
     font-size: 0.9rem;
     color: #6c757d;
 }
+ /* estilos del footer*/
+ 
+ .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+}
 
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-media {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: black;
+    transition: 400ms all;
+}
+
+.social-media a:hover {
+    color: #c1c1c1;
+}
