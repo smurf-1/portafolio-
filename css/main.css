@@ -5,6 +5,20 @@ body{
     margin: 0;
     padding: 0;
 }
+h1{
+    font-family: "Montserrat Alternates", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+h2{
+    font-size: 20px;
+    font-family: "Public Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal
+ 
+     
+}
 /* Aqui empieza los estilos de la barra de navegacion*/
 .navegacion{
     height: 70px;
@@ -19,6 +33,7 @@ body{
     left: 0;
     right: 0;
     z-index: 1000;
+
 }
 
 /* Aqui empiezan los estilos de la galeria de fotos*/
@@ -64,6 +79,35 @@ body{
 .animate-up img {
     animation: move-up-infinite 6s linear infinite;
 }
+
+@media (max-width: 852px) {
+    .column:nth-child(n+3) { /* Oculta las columnas 3, 4 y 5 */
+        display: none;
+    }
+}
+
+/* Media Query para tablets (1106px) - Solo 3 columnas */
+@media (min-width: 853px) and (max-width: 1106px) {
+    .column:nth-child(n+4) { /* Oculta las columnas 4 y 5 */
+        display: none;
+    }
+}
+
+/* Media Query para pantallas grandes (1380px) - Solo 4 columnas */
+@media (min-width: 1107px) and (max-width: 1380px) {
+    .column:nth-child(n+5) { /* Oculta la columna 5 */
+        display: none;
+    }
+}
+
+/* Más de 1380px - Se muestran todas las columnas */
+@media (min-width: 1381px) {
+
+    .column {
+        display: flex;
+    }
+}
+    
 /* Aqui terminan los estilos de la galeria de fotos*/
 
 /* Aqui empiezan los estilos seccion de biografia*/
@@ -83,7 +127,7 @@ body{
     height: auto;
     object-fit: cover;
     display: block;
-    margin: 20px auto;  /* Centrar en la sección */
+    margin: -30px auto;  /* Centrar en la sección */
     margin-top: 100px;
 }
 
@@ -99,11 +143,16 @@ body{
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
+.queesperas{
+    margin: 40px;
 
+}    
 /*estilos de la pagina blog*/
 .news-card img {
+    margin: 0px 0px 30px 0px;
     max-height: 400px;
     object-fit: cover;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 .news-card-title {
@@ -122,9 +171,6 @@ body{
     align-items: center;
     justify-content: center;
     padding: 40px;
-    position: relative;
-    width: 100%;
-    margin-top: 40px;
 }
 
 .call-to-action {
